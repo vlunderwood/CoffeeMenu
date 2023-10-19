@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Menu Items</title>
+</head>
+<body>
+    List of all Menu Items:
+    <table>
+        <c:forEach items="${requestScope.allMenu}" var="currentMenu">
+            <tr>
+                <td>${currentMenu.itemName}|</td>
+                <td>${currentMenu.itemDescription}</td>
+                <td>${currentMenu.itemPrice}</td>
+            </tr>
+        </c:forEach>
+    </table>
+    <br />
+    <a href="index.html">Home</a>
+</body>
+</html>
