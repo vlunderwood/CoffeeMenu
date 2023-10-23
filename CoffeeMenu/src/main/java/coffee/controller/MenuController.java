@@ -21,6 +21,27 @@ public class MenuController {
 	public String getForm(Menu menu) {
 		return "index";
 	}
+	
+	@GetMapping("/add.html")
+	public String getAdd(Menu menu) {
+		return "add";
+	}
+	
+	@GetMapping("/delete.html")
+	public String getDelete(Menu menu) {
+		return "delete";
+	}
+	
+	@GetMapping("/update.html")
+	public String getUpdate(Menu menu) {
+		return "update";
+	}
+	
+	/* This one will have to be more like add-mnue, since you need to get data from the DB prior to loading the page
+	@GetMapping("/show.html")
+	public String getForm(Menu menu) {
+		return "show";
+	}*/
 
 	@PostMapping("/add-menu")
 	public String addMenuDetails(Menu menu, Errors errors, Model model) {
