@@ -8,6 +8,7 @@
 	<div align="center" class="col-md-12">
 		<h2>Create an Item</h2>
 		<div class="col-md-6">
+			
 			<form action="#" th:action="@{/add-menu}" th:object="${menu}" method="post">
 				<div class="form-group">
 					<label for="itemName">Item Name:</label> <input type="text" class="form-control" id="itemName" th:field="*{itemName}">

@@ -1,5 +1,7 @@
 package coffee.beans;
 
+import java.util.List;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -60,6 +62,11 @@ public class Menu {
 	@Override
 	public String toString() {
 		return "Menu [Id=" + id + ", Item Name=" + itemName + ", Item Description=" + itemDescription + "itemPrice=" + itemPrice + "]";
+	}
+
+	public List<Menu> getAllMenuItems() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 	
 	
