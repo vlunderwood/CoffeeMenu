@@ -69,6 +69,9 @@ public class MenuController {
 	public String deleteable(@PathVariable("id") long id, Model model) {
 		Menu m = repo.findById(id).orElse(null);
 		repo.delete(m);
+		if (repo.findAll().isEmpty()) {
+			return "index.html";
+		}
 		return viewAllItems(model);
 	}
 	
